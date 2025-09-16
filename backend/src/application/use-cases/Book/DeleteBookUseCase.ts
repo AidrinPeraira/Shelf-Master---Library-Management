@@ -1,6 +1,6 @@
 import { IBookRepository } from "../../interfaces/IBookRepository";
 
-export class DeleteBook {
+export class DeleteBookUseCase {
   constructor(private readonly bookRepository: IBookRepository) {}
 
   async execute(bookId: string): Promise<void> {

@@ -8,5 +8,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@types/express": "^5.0.3",
+    "express": "^5.1.0",
+    "mongodb": "^6.19.0"
+  },
+  "devDependencies": {
+    "@types/mongodb": "^4.0.7"
+  }
 }

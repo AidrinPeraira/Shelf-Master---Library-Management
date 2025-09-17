@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import { MongoBookRepository } from "./infrastructure/repositories/MongoBookRepository.js";
 import { AddBookUseCase } from "./application/use-cases/Book/AddBookUseCase.js";
 import { connectToDatabase } from "./infrastructure/database/mongo.js";
 import { DeleteBookUseCase } from "./application/use-cases/Book/DeleteBookUseCase.js";
@@ -10,6 +9,7 @@ import { GetAllBooksUseCase } from "./application/use-cases/Book/GetAllBooksUseC
 import { GetBookByIdUseCase } from "./application/use-cases/Book/GetBookByIdUseCase.js";
 import { createBookRouter } from "./presentation/routes/bookRoutes.js";
 import { BookController } from "./presentation/controllers/BookController.js";
+import { MongoBookRepository } from "./infrastructure/repositories/MongoBookRepository.js";
 
 async function startServer() {
   dotenv.config();

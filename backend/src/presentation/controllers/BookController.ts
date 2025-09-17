@@ -1,12 +1,11 @@
 import { Request, Response } from "express";
-import { AddBookUseCase } from "../../application/use-cases/Book/AddBookUseCase";
-import { DeleteBookUseCase } from "../../application/use-cases/Book/DeleteBookUseCase";
-import { GetAllBooksUseCase } from "../../application/use-cases/Book/GetAllBooksUseCase";
-import { UpdateBookDetailsUseCase } from "../../application/use-cases/Book/UpdateBookDetailsUseCase";
-import { GetBookByIdUseCase } from "../../application/use-cases/Book/GetBookByIdUseCase";
-import { Book } from "../../domain/entities/Book";
+import { AddBookUseCase } from "../../application/use-cases/Book/AddBookUseCase.js";
+import { DeleteBookUseCase } from "../../application/use-cases/Book/DeleteBookUseCase.js";
+import { GetAllBooksUseCase } from "../../application/use-cases/Book/GetAllBooksUseCase.js";
+import { UpdateBookDetailsUseCase } from "../../application/use-cases/Book/UpdateBookDetailsUseCase.js";
+import { GetBookByIdUseCase } from "../../application/use-cases/Book/GetBookByIdUseCase.js";
 
-class BookController {
+export class BookController {
   constructor(
     private readonly addBookUseCase: AddBookUseCase,
     private readonly deleteBookUseCase: DeleteBookUseCase,

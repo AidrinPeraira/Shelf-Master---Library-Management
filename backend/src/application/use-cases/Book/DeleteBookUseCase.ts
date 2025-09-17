@@ -1,4 +1,4 @@
-import { IBookRepository } from "../../interfaces/IBookRepository";
+import { IBookRepository } from "../../repositories/IBookRepository.js";
 
 export class DeleteBookUseCase {
   constructor(private readonly bookRepository: IBookRepository) {}

@@ -1,5 +1,5 @@
-import { Book } from "../../../domain/entities/Book";
-import { IBookRepository } from "../../interfaces/IBookRepository";
+import { Book } from "../../../domain/entities/Book.js";
+import { IBookRepository } from "../../repositories/IBookRepository.js";
 
 export class GetAllBooksUseCase {
   constructor(private readonly booksRepository: IBookRepository) {}

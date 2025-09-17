@@ -1,4 +1,4 @@
-import { Book } from "../../domain/entities/Book";
+import { Book } from "../../domain/entities/Book.js";
 
 /**
  * This interface is a "wishlist."

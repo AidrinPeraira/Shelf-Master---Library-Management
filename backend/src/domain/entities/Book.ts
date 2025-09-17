@@ -4,5 +4,6 @@ export interface Book {
   author: string;
   isbn: string;
   publishedDate: Date;
+  available: boolean;
   donatedBy: string; // this will be a user id
 }

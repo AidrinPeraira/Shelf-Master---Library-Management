@@ -2,18 +2,18 @@ import { IBookRepository } from "../../application/repositories/IBookRepository.
 import { Collection, Db, ObjectId } from "mongodb";
 import { Book } from "../../domain/entities/Book.js";
 
-type bookData = Omit<Book, "bookId">;
+type bookInputData = Omit<Book, "bookId">;
 
 export class MongoBookRepository implements IBookRepository {
-  private readonly collection: Collection<bookData>;
+  private readonly collection: Collection<bookInputData>;
 
   constructor(db: Db) {
-    this.collection = db.collection<bookData>("books");
+    this.collection = db.collection<bookInputData>("books");
   }
 
-  async create(bookData: bookData): Promise<Book> {
-    const result = await this.collection.insertOne(bookData);
-    return { ...bookData, bookId: result.insertedId.toHexString() }; //to string will also include teh text "ObjectId(...)" toHExString just gives the id string
+  async create(bookInputData: bookInputData): Promise<Book> {
+    const result = await this.collection.insertOne(bookInputData);
+    return { ...bookInputData, bookId: result.insertedId.toHexString() }; //to string will also include teh text "ObjectId(...)" toHExString just gives the id string
   }
 
   async findById(bookId: string): Promise<Book | null> {
